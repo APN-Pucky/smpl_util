@@ -1,0 +1,6 @@
+smpl\_util.version
+==================
+
+.. currentmodule:: smpl_util
+
+.. autofunction:: version
