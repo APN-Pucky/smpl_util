@@ -1,4 +1,4 @@
-name: Fast-Forward
+name: Follow-Tag
 
 on: 
   tags:
