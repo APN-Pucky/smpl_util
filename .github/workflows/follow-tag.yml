@@ -1,7 +1,8 @@
 name: Follow-Tag
 
 on: 
-  tags:
+  push:
+    tags:
 
 jobs:
   run:
