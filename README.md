@@ -1,5 +1,5 @@
 # smpl_util
-Simplified plotting and fitting in python.
+Simplified utilities in python.
 
 [![PyPI version][pypi image]][pypi link] [![PyPI version][pypi versions]][pypi link]  ![downloads](https://img.shields.io/pypi/dm/smpl_util.svg)
 
