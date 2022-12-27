@@ -1,7 +1,7 @@
 """Simplified general utilities."""
 import numpy as np
-
-from smpl import doc
+import warnings
+from smpl_doc import doc
 
 
 @doc.deprecated("1.0.3", "Use `s*n` instead.")
@@ -18,6 +18,89 @@ def times(s, n):
 
     """
     return s.join(["" for i in range(0, n + 1)])
+
+
+def rename(old, new, warning=True):
+    """
+    Annotation to replace the name of a function argument.
+
+    Examples
+    --------
+    >>> @rename("a","b")
+    ... def f(b):
+    ...     return b
+    >>> f(1)
+    1
+    >>> f(a=1)
+    1
+    >>> f(b=1)
+    1
+    >>> f(b=2,a=1)
+    2
+    """
+
+    def wrapper(target):
+        def lammda(*args, **kwargs):
+            if old in kwargs and new in kwargs:
+                if warning:
+                    warnings.warn(
+                        f"Argument {old} and {new} are both set, {new} will be used.",
+                        DeprecationWarning,
+                    )
+                del kwargs[old]
+            elif old in kwargs:
+                if warning:
+                    warnings.warn(
+                        f"Argument {old} is deprecated, use {new} instead.",
+                        DeprecationWarning,
+                    )
+                kwargs[new] = kwargs[old]
+                del kwargs[old]
+            return target(*args, **kwargs)
+
+        return lammda
+
+    return wrapper
+
+
+# TODO split in to own package
+def withify(prefix="with_", sufix="", override=False):
+    """
+    Decorator to add with_ methods to a class.
+
+    Examples
+    --------
+
+    >>> from dataclasses import dataclass, field
+    >>> from typing import Optional
+    >>> @withify()
+    ... @dataclass
+    ... class A:
+    ...     a : Optional[int] = field(default=0)
+    ...     b : Optional[int] = field(default=0)
+    ...     c : Optional[int] = field(default=0)
+    >>> a = A(0,0,0)
+    >>> a.with_a(1).with_b(2).with_c(3)
+    A(a=1, b=2, c=3)
+    """
+
+    def _withify(cls):
+        inst = cls()
+        for k in inst.__annotations__.keys():
+            fun = prefix + k + sufix
+            ok = k
+            if override or not hasattr(cls, fun):
+
+                def tmp(self, value, k=ok):
+                    """Set `value` and return self."""
+                    self.__dict__[k] = value
+                    return self
+
+                tmp.__doc__ = f"Set {k} to `value` and return self."
+                setattr(cls, fun, tmp)
+        return cls
+
+    return _withify
 
 
 def get(key, ddict, default=None):
