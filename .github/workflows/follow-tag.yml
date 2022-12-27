@@ -1,7 +1,7 @@
 name: Fast-Forward
 
 on: 
-  tag:
+  tags:
 
 jobs:
   run:
