@@ -11,25 +11,6 @@
 .. include:: ../../README.md
    :parser: myst_parser.sphinx_
 
-
-.. toctree::
-   :glob:
-   :hidden:
-   :caption: Versions:
-   :maxdepth: 3
-
-   Stable <https://apn-pucky.github.io/smpl_util/>
-   Dev <https://apn-pucky.github.io/smpl_util/test/>
-
-.. toctree::
-   :glob:
-   :hidden:
-   :caption: Links:
-   :maxdepth: 3
-
-   GitHub <https://github.com/APN-Pucky/smpl_util>
- 
-
 .. toctree::
    :glob:
    :maxdepth: 3  
@@ -54,6 +35,24 @@
    :caption: Profiling:
 
    performance/*
+
+.. toctree::
+   :glob:
+   :hidden:
+   :caption: Versions:
+   :maxdepth: 3
+
+   RTD <https://smpl_util.readthedocs.io/en/stable/>
+   Stable <https://apn-pucky.github.io/smpl_util/>
+   Dev <https://apn-pucky.github.io/smpl_util/test/>
+
+.. toctree::
+   :glob:
+   :hidden:
+   :caption: Links:
+   :maxdepth: 3
+
+   GitHub <https://github.com/APN-Pucky/smpl_util>
 
 
 
