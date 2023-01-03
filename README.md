@@ -12,8 +12,6 @@ Simplified utilities in python.
 | [![Documentation][rtd s i]][rtd s l] | [![Documentation][rtd t i]][rtd t l]|
 
 ## Documentation
-
--   <https://smpl_util.readthedocs.io/en/stable/>
 -   <https://apn-pucky.github.io/smpl_util/index.html>
 
 ## Versions
