@@ -20,6 +20,7 @@ def times(s, n):
     return s.join(["" for i in range(0, n + 1)])
 
 
+# TODO make nicer transparent with fields?
 def rename(old, new, warning=True):
     """
     Annotation to replace the name of a function argument.
@@ -58,6 +59,7 @@ def rename(old, new, warning=True):
                 del kwargs[old]
             return target(*args, **kwargs)
 
+        lammda.__doc__ = target.__doc__
         return lammda
 
     return wrapper
