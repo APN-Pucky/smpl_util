@@ -1969,14 +1969,14 @@ files = [
 
 [[package]]
 name = "smpl-doc"
-version = "1.1.0"
+version = "1.1.3"
 description = "SiMPLe plotting and fitting"
 category = "main"
 optional = false
-python-versions = ">=3.8,<4.0"
+python-versions = ">=3.7,<4.0"
 files = [
-    {file = "smpl_doc-1.1.0-py3-none-any.whl", hash = "sha256:e185bf50932995328e68f5307547281f0de506529c09b89e866b9f7860569f02"},
-    {file = "smpl_doc-1.1.0.tar.gz", hash = "sha256:fa52eb1c09b88a819dd0b2b826e2bfc4ecd3920b3f1c28d2581571225a2da59c"},
+    {file = "smpl_doc-1.1.3-py3-none-any.whl", hash = "sha256:ab1f53754a04bfeae4fcc5f32f84706ca7d4200e8bc1e0ceff6aed74743f26d5"},
+    {file = "smpl_doc-1.1.3.tar.gz", hash = "sha256:d0bc07b628498ea4a2b3393b0c0b562926fe9c7f43a3c2563a45775f2b8cf71d"},
 ]
 
 [package.dependencies]
