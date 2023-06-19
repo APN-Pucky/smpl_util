@@ -500,13 +500,13 @@ pgp = ["gpg"]
 
 [[package]]
 name = "dunamai"
-version = "1.15.0"
+version = "1.17.0"
 description = "Dynamic version generation"
 optional = false
 python-versions = ">=3.5,<4.0"
 files = [
-    {file = "dunamai-1.15.0-py3-none-any.whl", hash = "sha256:646d7a6c07d0ec8412ac43c1a3546f1d1b52f3ed918f4bfbefe32439b49dec7e"},
-    {file = "dunamai-1.15.0.tar.gz", hash = "sha256:d6088922df3226a8234c228803bb01902a83766d04c2cddb33d4dd3bf85ec9a5"},
+    {file = "dunamai-1.17.0-py3-none-any.whl", hash = "sha256:5aa4ac1085de10691269af021b10497261a5dd644f277e2a21822212604d877b"},
+    {file = "dunamai-1.17.0.tar.gz", hash = "sha256:459381b585a1e78e4070f0d38a6afb4d67de2ee95064bf6b0438ec620dde0820"},
 ]
 
 [package.dependencies]
@@ -1373,17 +1373,17 @@ files = [
 
 [[package]]
 name = "poetry-dynamic-versioning"
-version = "0.21.3"
+version = "0.23.0"
 description = "Plugin for Poetry to enable dynamic versioning based on VCS tags"
 optional = false
 python-versions = ">=3.7,<4.0"
 files = [
-    {file = "poetry_dynamic_versioning-0.21.3-py3-none-any.whl", hash = "sha256:39c8055a20aad980a6e11419dc44dd8000fdb4fe94fd3fc6380822771e6cc2a8"},
-    {file = "poetry_dynamic_versioning-0.21.3.tar.gz", hash = "sha256:2e08ca0f089e2458f9cd41f2d37f01ce3ae4e40975004dc143fbf86b793ec909"},
+    {file = "poetry_dynamic_versioning-0.23.0-py3-none-any.whl", hash = "sha256:764be34df672f57f5000dd800110a21dc42bcd9ab0f5492a37bd4f0265ee521d"},
+    {file = "poetry_dynamic_versioning-0.23.0.tar.gz", hash = "sha256:c540fde6e9e334ec3b0f14f57f8467076d8d76ed0d503a89db9f91e59fd5d6f9"},
 ]
 
 [package.dependencies]
-dunamai = ">=1.14.0,<2.0.0"
+dunamai = ">=1.17.0,<2.0.0"
 jinja2 = ">=2.11.1,<4"
 poetry = {version = ">=1.2.0,<2.0.0", optional = true, markers = "extra == \"plugin\""}
 tomlkit = ">=0.4"
@@ -2492,4 +2492,4 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "ea42e0556f6742827ffef4fe46dba547da3aa9e6953f941850b7ecfac89996de"
+content-hash = "f462a02e9ac71ba724e18b9464b4c86b66855fca52c39cdea61db9ca368f1b4e"
